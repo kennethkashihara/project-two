@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
-<script src="mturk.js">
+<script src="mturk.js"></script>
 <head><title>How many people are in these photographs?</title></head>
+
+	<script>
+	  var numclicks = 0;
+	  var keydowns = 0;
+	$(document).ready(function()) {
+	 $(document).click(function() {
+	   console.log("i was clicked!");
+	})
+		$("#numclickfield").val(numclicks);
+	})
+	$(document).keydown(function() {
+	   keydowns++;
+	  $("#numkeydowns").val(keydowns);
+	})
+	})
+	</script>
+</head>
 
     <body>
 	<form action="index.php" num="my form" method="POST">
