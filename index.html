@@ -8,7 +8,10 @@ DOCTYPE html>
 	  var keydowns = 0;
 	$(document).ready(function()) {
 	 $("#theimage").click(function() {
+	   numclicks++;
 	   console.log("i was clicked!");
+	$("#numberofpeople").text(numclicks);
+
 	})
 		$("#numclickfield").val(numclicks);
 	}
@@ -19,6 +22,10 @@ DOCTYPE html>
 
 	</script>
 </head>
+
+<p>
+You've selected <span id="numberofpeople">0</span>
+</p>
 
     <body>
 	<form action="index.php" num="my form" method="POST">
