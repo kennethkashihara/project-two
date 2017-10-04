@@ -8,32 +8,80 @@
 	<script>
 	  var numclicks = 0;
 	  var keydowns = 0;
+		var addedelements = []
+
 	$(document).ready(function() {
 	 $("#theimage").click(function(e) {
 	   numclicks++;
 
+		 $("#numberofpeople").text(numclicks);
+
 	   console.log(e);
 
-	$("#numberofpeople").text(numclicks);
-
 		var newdomelement = $("<div class='marker'></div>");
-		  newdomelement.css("left",(e.pageX-3) + "px");
-			newdomelement.css("top",(e.pageY-3) + "px");
+		newdomelement.css("left",(e.pageX-3) + "px");
+		newdomelement.css("top",(e.pageY-3) + "px");
 
 			$("body").append(newdomelement);
+			addedelements.push(newdomelement);
 	})
 
-	$(document).keydown(function() {
+	$(document).keydown(function(e) {
 	   keydowns++;
+		 $("#nuberofpeople").text(numclicks);
+
+		 $("#numberofpeoplefield").val(numclicks);
+
 	  $("#numkeydowns").val(keydowns);
+
+		console.log(e);
+		if (e.key=="z" && e.ctrlKey) {
+				var elem2remove=addedelements.pop();
+				removeElement(elem2remove);
+			}
 	})
 })
+function removeElement(elem) {
+	$(elem).remove();
+	numclicks--;
+	$("#nuberofpeople").text(numclicks);
+	$("#numberofpeoplefield").val(numclicks);
+}
+
+funtion removeElementEvent(e) {
+	removeElement(this);
+}
 	</script>
+
+<style>
+	.makrer {
+		border: 2px solid red;
+		border-radius: 5px;
+		width: 2px;
+		height: 2px
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	</style>
+
 </head>
 
+<body>
+
+	<h1>A Test HIT </h1>
+
 <p>
-You've selected <span id="numberofpeople">0</span>
+You've selected <span id="numberofpeople">0</span> people.
+
+<br>
+	<input id="numclickfield" type="hidden" name"numberclicked">
+	<input id="numkeydowns" type="hidden" name="keydowns">
+	<input id="numberofpoeple" type="hidden" name="numpeople">
+
 </p>
+
+
 
     <body>
 	<form action="index.php" num="my form" method="POST">
