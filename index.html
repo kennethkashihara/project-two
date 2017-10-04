@@ -1,4 +1,4 @@
-DOCTYPE html>
+<DOCTYPE html>
 <html>
 <!-- <script src="mturk.js"></script> -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -11,21 +11,23 @@ DOCTYPE html>
 	$(document).ready(function() {
 	 $("#theimage").click(function(e) {
 	   numclicks++;
-	   console.log("e");
+
+	   console.log(e);
+
 	$("#numberofpeople").text(numclicks);
-		var newdomelement = $("<div class='marker'></div?");
+
+		var newdomelement = $("<div class='marker'></div>");
 		  newdomelement.css("left",(e.pageX-3) + "px");
 			newdomelement.css("top",(e.pageY-3) + "px");
 
 			$("body").append(newdomelement);
 	})
-		$("#numclickfield").val(numclicks);
-	})
+
 	$(document).keydown(function() {
 	   keydowns++;
 	  $("#numkeydowns").val(keydowns);
 	})
-
+})
 	</script>
 </head>
 
