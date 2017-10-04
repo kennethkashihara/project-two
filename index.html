@@ -8,12 +8,15 @@ DOCTYPE html>
 	<script>
 	  var numclicks = 0;
 	  var keydowns = 0;
-	(document).ready(function() {
+	$(document).ready(function() {
 	 $("#theimage").click(function() {
 	   numclicks++;
 	   console.log("i was clicked!");
 	$("#numberofpeople").text(numclicks);
 		var newdomelement = $("<div class='marker'></div?");
+		  newdomelement.css("left",(e.pageX-3) + "px");
+			newdomelement.css("top",(e.pageY-3) + "px");
+			
 			$("body").append(newdomelement);
 	})
 		$("#numclickfield").val(numclicks);
