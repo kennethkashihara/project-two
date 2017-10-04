@@ -1,4 +1,4 @@
-me) :: retrieves URL parameters if provided
+/**me) :: retrieves URL parameters if provided
  *
  *  Prepares the page for MTurk on load.
  *  1. looks for a form element with id="mturk_form", and sets its METHOD / ACTION

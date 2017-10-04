@@ -1,0 +1,9 @@
+syntax on 
+
+set mouse=a "lets vim respond to mouse clicks
+set number  "show line numbers
+set colorcolumn=81 "highlights column #81 so you know where to stop
+set tabstop=4 "4-column tabs
+set softtabstop=4 "aligns to 4-column tabs
+set expandtab "Use spaces instead of tabs
+set autoindent "autoindent new lines
