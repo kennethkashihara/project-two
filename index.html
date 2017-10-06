@@ -27,12 +27,15 @@ If you get close enough, you will get a bonus.
 	   numclicks++;
 
 		 $("#numberofpeople").text(numclicks);
+		 $("#numberofpeoplefield").val(numclicks);
 
-	   console.log(e);
+		 var newdomelement = $("<div class='marker'></div>");
+		 newdomelement.css("left",(e.pageX-3) + "px");
+		 newdomelement.css("top",(e.pageY-3) + "px");
 
-		var newdomelement = $("<div class='marker'></div>");
-		newdomelement.css("left",(e.pageX-3) + "px");
-		newdomelement.css("top",(e.pageY-3) + "px");
+		 var currhistory = $("#history").val();
+		 currhistory += "|" + e.pageX + ',' + e.pageY + "|";
+		 $("#history").val(currhistory);
 
 			$("body").append(newdomelement);
 			addedelements.push(newdomelement);
@@ -40,7 +43,8 @@ If you get close enough, you will get a bonus.
 
 	$(document).keydown(function(e) {
 	   keydowns++;
-		 $("#nuberofpeople").text(numclicks);
+
+		 $("#numberofpeople").text(numclicks);
 
 		 $("#numberofpeoplefield").val(numclicks);
 
@@ -63,6 +67,7 @@ function removeElement(elem) {
 funtion removeElementEvent(e) {
 	removeElement(this);
 }
+	== $0
 	</script>
 
 <style>
@@ -93,28 +98,95 @@ You've selected <span id="numberofpeople">0</span> people.
 
 </p>
 
-
-
     <body>
-	<form action="index.php" num="my form" method="POST">
+	<!-- <form action="index.php" num="my form" method="POST"> -->
+
+
     	<img src="https://lh4.googleusercontent.com/CQeMyOoBSL9jgWcMzdAjamd5QoOKhBsEj5yJTtvw5WuIFD1g42EIy7zUZKHNHXJaXyKJo8XvS34bXqZsg1VIQ_ZPyO-DFE4sTLVRBvRakEYJMXtqn1ETy6yW1gSKsYA5li7rLJg" alt="Image 1" width=1100>
 How many people are in Image 1?:<input type="text" num="answer"><br>
-
+  <form id="mturk_form">
+	  <p>
+		  <input id="numclickfield" type="hidden" name="numclicks">
+			<input id="numkeysdown" type="hidden" name="keydowns">
+			<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+			<input id="history" type="hidden" name="history">
+			<input type="submit" name="numberforimage1"> ==$0
+		</p>
+	</form>
 	<img src="https://lh5.googleusercontent.com/XEZ6hSq5NkJkJlBsj1kVnQJqT7IznIkj21KyXTOJIfhpgHO5kGrrN0vQbg4HXNJ5E-o7LVVICllae7PtspMUsOEbzl8_hGqjLPpTSssndPgzxHdIsu-R6u5OA6KJxZSXDrXOqUk" alt="Image 2" width=1100>
 How many people are in Image 2?:<input type="text" num="answer"><br>
+
+<form id="mturk_form">
+	<p>
+		<input id="numclickfield" type="hidden" name="numclicks">
+		<input id="numkeysdown" type="hidden" name="keydowns">
+		<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+		<input id="history" type="hidden" name="history">
+		<input type="submit" name="numberforimage1"> ==$0
+	</p>
+</form>
+
 	<img src="https://lh3.googleusercontent.com/_mKcMOOH9MLuz7wXaflKjT0dvKg_o0sjtRnvMxDb0a734tqCJ8Qp36UZach0rGfZ1eQtW2HtGzQOqa1Z16Y2vwhpO8GeFZEMIQOGQKkNeH0bnNrB4tPbzW5RDyOpvNOzteVASDk" alt="Image 3" width=1100>
 How many people are in Image 3?:<input type="text" num="answer"><br>
+
+<form id="mturk_form">
+	<p>
+		<input id="numclickfield" type="hidden" name="numclicks">
+		<input id="numkeysdown" type="hidden" name="keydowns">
+		<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+		<input id="history" type="hidden" name="history">
+		<input type="submit" name="numberforimage1"> ==$0
+	</p>
+</form>
+
+
 	<img src="https://lh3.googleusercontent.com/MdjzugVlnkqSvrSByCOE8kqRdv5DqEi-frlld5QM9Y6EC2sP4QlyRcnxkHwYKcPKpD18b4mbcqwKy4PywL4YGZ-c4v5Yi_x43x28oRg7QMcsmX6QjMC0iBn_xVlvyNkjjVXIzl8" alt="Image 4" width=1100>
 How many people are in Image 4:<input type="text" num="answer"><br>
+
+<form id="mturk_form">
+	<p>
+		<input id="numclickfield" type="hidden" name="numclicks">
+		<input id="numkeysdown" type="hidden" name="keydowns">
+		<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+		<input id="history" type="hidden" name="history">
+		<input type="submit" name="numberforimage1"> ==$0
+	</p>
+</form>
+
 	<img src="https://lh6.googleusercontent.com/BHWWLURD_uj3iGelbppRRO2hsZfKLqAddph9oPIn2znchpU7oE_N3T7GlXS4ci0G2J__fJjOCdOt5bSiwVOr03rRpv36rpi_tJCPtjOHDpQVCp5nIgL_f4_2M82nwLVrDokPBio" alt="Image 5" width=1100>
 How many people are in Image 5:<input type="text" num="answer"><br>
+<form id="mturk_form">
+	<p>
+		<input id="numclickfield" type="hidden" name="numclicks">
+		<input id="numkeysdown" type="hidden" name="keydowns">
+		<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+		<input id="history" type="hidden" name="history">
+		<input type="submit" name="numberforimage1"> ==$0
+	</p>
+</form>
+
 	<img src="https://lh6.googleusercontent.com/cagtUwegX0hoiMrSlG29a0wCjN_kPUstPHKwZQZApBPA1ZD4RHRXkKS2FLWRR8fDUvE2D7mDfox0JcMF5ydgrouR1vAnX9bgGTm8elhYWlG_tFfpuCNm28jbGucaWywY-W14BDI" alt="Image 6" width=1100>
 How many people are in Image 6?:<input type="text" num="answer"><br>
-	<img src="https://us.123rf.com/450wm/olegdudko/olegdudko1507/olegdudko150703881/42148343-business-people-group-of-people.jpg?ver=6t="Image7" width="1100">
+<form id="mturk_form">
+	<p>
+		<input id="numclickfield" type="hidden" name="numclicks">
+		<input id="numkeysdown" type="hidden" name="keydowns">
+		<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+		<input id="history" type="hidden" name="history">
+		<input type="submit" name="numberforimage1"> ==$0
+	</p>
+</form>
+
+	<img src="https://us.123rf.com/450wm/olegdudko/olegdudko1507/olegdudko150703881/42148343-business-people-group-of-people.jpg?ver=6t="Image7" width="1100>
 How many people are in Image 7?:<input type="text" num="answer"><br>
-
-<input type="submit" value="submit the survey"/>
-
+<form id="mturk_form">
+	<p>
+		<input id="numclickfield" type="hidden" name="numclicks">
+		<input id="numkeysdown" type="hidden" name="keydowns">
+		<input id="numberofpeoplefield" type="hidden" name="numberofpeoplefield">
+		<input id="history" type="hidden" name="history">
+		<input type="submit" name="numberforimage1"> ==$0
+	</p>
 </form>
 
 </body>
