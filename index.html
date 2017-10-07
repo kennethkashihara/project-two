@@ -30,7 +30,7 @@ If you get close enough, you will get a bonus.
 						$("#numberofpeople").text(numclicks);
 						$("#numberofpeoplefield").val(numclicks);
 
-						var newdomelement = $("&lt;div class='marker'&gt;&lt;/div&gt;");
+						var newdomelement = $("<div class='marker'></div>");
 						newdomelement.css("left", (e.pageX-3) + "px");
 						newdomelement.css("top", (e.pageY-3) + "px");
 
