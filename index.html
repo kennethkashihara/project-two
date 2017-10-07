@@ -18,68 +18,77 @@ There is one hard one! Please try your best. This is a contest.
 If you get close enough, you will get a bonus.
 
 	<script>
-	  var numclicks = 0;
-	  var keydowns = 0;
-		var addedelements = []
 
-	$(document).ready(function() {
-	 $("#theimage").click(function(e) {
-	   numclicks++;
+			 var numclicks = 0;
+			 var keydowns = 0;
 
-		 $("#numberofpeople").text(numclicks);
-		 $("#numberofpeoplefield").val(numclicks);
+				var addedelements = [];
 
-		 var newdomelement = $("<div class='marker'></div>");
-		 newdomelement.css("left",(e.pageX-3) + "px");
-		 newdomelement.css("top",(e.pageY-3) + "px");
+			 $(document).ready(function() {
+				 $("#theimage").click(function(e) {
+						numclicks++;
+						$("#numberofpeople").text(numclicks);
+						$("#numberofpeoplefield").val(numclicks);
 
-		 var currhistory = $("#history").val();
-		 currhistory += "|" + e.pageX + ',' + e.pageY + "|";
-		 $("#history").val(currhistory);
+						var newdomelement = $("&lt;div class='marker'&gt;&lt;/div&gt;");
+						newdomelement.css("left", (e.pageX-3) + "px");
+						newdomelement.css("top", (e.pageY-3) + "px");
 
-			$("body").append(newdomelement);
-			addedelements.push(newdomelement);
-	})
+						var currhistory = $("#history").val();
+						currhistory += "|" + e.pageX + "," + e.pageY + "|";
+						$("#history").val(currhistory);
 
-	$(document).keydown(function(e) {
-	   keydowns++;
+						newdomelement.click(removeElementEvent);
 
-		 $("#numberofpeople").text(numclicks);
+						$("body").append(newdomelement);
 
-		 $("#numberofpeoplefield").val(numclicks);
+						// add to history
+						addedelements.push(newdomelement);
+				 })
+				 $(document).keydown(function(e) {
+					 keydowns++;
+					 $("#numkeydowns").val(keydowns);
 
-	  $("#numkeydowns").val(keydowns);
+						console.log(e);
 
-		console.log(e);
-		if (e.key=="z" && e.ctrlKey) {
-				var elem2remove=addedelements.pop();
-				removeElement(elem2remove);
-			}
-	})
-})
-function removeElement(elem) {
-	$(elem).remove();
-	numclicks--;
-	$("#nuberofpeople").text(numclicks);
-	$("#numberofpeoplefield").val(numclicks);
-}
+						if(e.key=="z" &amp;&amp; e.ctrlKey) {
+							var elem2remove = addedelements.pop();
+							removeElement(elem2remove);
+						}
+				 })
+			 })
 
-funtion removeElementEvent(e) {
-	removeElement(this);
-}
-	== $0
-	</script>
+				function removeElement(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent(e) {
+					removeElement(this);
+				}
+
+
+</script>
+
+	<script src="mturk.js"></script>
+	<script></script>
+
 
 <style>
-	.makrer {
-		border: 2px solid red;
-		border-radius: 5px;
-		width: 2px;
-		height: 2px
-		position: absolute;
-		left: 0px;
-		top: 0px;
-	}
+
+		.marker {
+			border: 2px solid red;
+			border-radius: 5px;
+			width: 2px;
+			height: 2px;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+		}
+	
 	</style>
 
 </head>
