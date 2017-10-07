@@ -67,7 +67,7 @@ If you get close enough, you will get a bonus. <br>
 						currhistory += "|" + e.pageX + "," + e.pageY + "|";
 						$("#history").val(currhistory);
 
-						newdomelement.click(removeElementEvent);
+						newdomelement.click(removeElementEvent1);
 
 						$("body").append(newdomelement);
 
@@ -87,7 +87,7 @@ If you get close enough, you will get a bonus. <br>
 						currhistory += "|" + e.pageX + "," + e.pageY + "|";
 						$("#history").val(currhistory);
 
-						newdomelement.click(removeElementEvent);
+						newdomelement.click(removeElementEvent2);
 
 						$("body").append(newdomelement);
 
@@ -107,7 +107,7 @@ If you get close enough, you will get a bonus. <br>
 						currhistory += "|" + e.pageX + "," + e.pageY + "|";
 						$("#history").val(currhistory);
 
-						newdomelement.click(removeElementEvent);
+						newdomelement.click(removeElementEvent3);
 
 						$("body").append(newdomelement);
 
@@ -127,7 +127,7 @@ If you get close enough, you will get a bonus. <br>
 						currhistory += "|" + e.pageX + "," + e.pageY + "|";
 						$("#history").val(currhistory);
 
-						newdomelement.click(removeElementEvent);
+						newdomelement.click(removeElementEvent4);
 
 						$("body").append(newdomelement);
 
@@ -147,7 +147,7 @@ If you get close enough, you will get a bonus. <br>
 						currhistory += "|" + e.pageX + "," + e.pageY + "|";
 						$("#history").val(currhistory);
 
-						newdomelement.click(removeElementEvent);
+						newdomelement.click(removeElementEvent5);
 
 						$("body").append(newdomelement);
 
@@ -167,7 +167,7 @@ If you get close enough, you will get a bonus. <br>
 						currhistory += "|" + e.pageX + "," + e.pageY + "|";
 						$("#history").val(currhistory);
 
-						newdomelement.click(removeElementEvent);
+						newdomelement.click(removeElementEvent6);
 
 						$("body").append(newdomelement);
 
@@ -199,6 +199,78 @@ If you get close enough, you will get a bonus. <br>
 					removeElement(this);
 				}
 
+				function removeElement1(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent1(e) {
+					removeElement(this);
+				}
+				function removeElement2(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent2(e) {
+					removeElement(this);
+				}
+
+				function removeElement3(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent3(e) {
+					removeElement(this);
+				}
+
+				function removeElement4(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent4(e) {
+					removeElement(this);
+				}
+
+
+				function removeElement5(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent5(e) {
+					removeElement(this);
+				}
+
+				function removeElement6(elem) {
+					$(elem).remove();
+
+					numclicks--;
+					$("#numberofpeople").text(numclicks);
+					$("#numberofpeoplefield").val(numclicks);
+				}
+
+				function removeElementEvent6(e) {
+					removeElement(this);
+				}
+
 
 </script>
 
@@ -227,7 +299,7 @@ If you get close enough, you will get a bonus. <br>
 	<h1> </h1>
 
 <p>
-You've selected <span id="numberofpeople">0</span> people.
+
 
 <br>
 	<input id="numclickfield" type="hidden" name"numberclicked">
@@ -241,6 +313,7 @@ You've selected <span id="numberofpeople">0</span> people.
 
 
     	<img id="theimage" src="https://lh4.googleusercontent.com/CQeMyOoBSL9jgWcMzdAjamd5QoOKhBsEj5yJTtvw5WuIFD1g42EIy7zUZKHNHXJaXyKJo8XvS34bXqZsg1VIQ_ZPyO-DFE4sTLVRBvRakEYJMXtqn1ETy6yW1gSKsYA5li7rLJg" alt="Image 1" width=1100>
+<br> You've selected <span id="numberofpeople">0</span> people.
 <br> How many people are in Image 1?:
 
   <form id="mturk_form">
@@ -271,7 +344,7 @@ You've selected <span id="numberofpeople">0</span> people.
 </form>
 
 	<img id="theimage2" src="https://lh3.googleusercontent.com/_mKcMOOH9MLuz7wXaflKjT0dvKg_o0sjtRnvMxDb0a734tqCJ8Qp36UZach0rGfZ1eQtW2HtGzQOqa1Z16Y2vwhpO8GeFZEMIQOGQKkNeH0bnNrB4tPbzW5RDyOpvNOzteVASDk" alt="Image 3" width=1100>
-<br> You've selected <span id="numberofpeople">0</span> people.
+<br> You've selected <span id="numberofpeople2">0</span> people.
 <br> How many people are in Image 3?:
 
 <form id="mturk_form">
@@ -287,7 +360,7 @@ You've selected <span id="numberofpeople">0</span> people.
 
 
 	<img id="theimage3" src="https://lh3.googleusercontent.com/MdjzugVlnkqSvrSByCOE8kqRdv5DqEi-frlld5QM9Y6EC2sP4QlyRcnxkHwYKcPKpD18b4mbcqwKy4PywL4YGZ-c4v5Yi_x43x28oRg7QMcsmX6QjMC0iBn_xVlvyNkjjVXIzl8" alt="Image 4" width=1100>
-<br> You've selected <span id="numberofpeople">0</span> people.
+<br> You've selected <span id="numberofpeople3">0</span> people.
 <br> How many people are in Image 4:
 
 <form id="mturk_form">
@@ -304,7 +377,7 @@ You've selected <span id="numberofpeople">0</span> people.
 </form>
 
 	<img id="theimage4" src="https://lh6.googleusercontent.com/BHWWLURD_uj3iGelbppRRO2hsZfKLqAddph9oPIn2znchpU7oE_N3T7GlXS4ci0G2J__fJjOCdOt5bSiwVOr03rRpv36rpi_tJCPtjOHDpQVCp5nIgL_f4_2M82nwLVrDokPBio" alt="Image 5" width=1100>
-<br> You've selected <span id="numberofpeople">0</span> people.
+<br> You've selected <span id="numberofpeople4">0</span> people.
 <br> How many people are in Image 5:
 <form id="mturk_form">
 	<p>
@@ -318,7 +391,7 @@ You've selected <span id="numberofpeople">0</span> people.
 </form>
 
 	<img id="theimage5" src="https://lh6.googleusercontent.com/cagtUwegX0hoiMrSlG29a0wCjN_kPUstPHKwZQZApBPA1ZD4RHRXkKS2FLWRR8fDUvE2D7mDfox0JcMF5ydgrouR1vAnX9bgGTm8elhYWlG_tFfpuCNm28jbGucaWywY-W14BDI" alt="Image 6" width=1100>
-<br> You've selected <span id="numberofpeople">0</span> people.
+<br> You've selected <span id="numberofpeople5">0</span> people.
 <br> How many people are in Image 6?:
 <form id="mturk_form">
 	<p>
@@ -332,7 +405,7 @@ You've selected <span id="numberofpeople">0</span> people.
 </form>
 
 	<img id="theimage6" src="https://us.123rf.com/450wm/olegdudko/olegdudko1507/olegdudko150703881/42148343-business-people-group-of-people.jpg?ver=6t="Image7" width="1100>
-<br> You've selected <span id="numberofpeople">0</span> people.
+<br> You've selected <span id="numberofpeople6">0</span> people.
 <br> How many people are in Image 7?
 <form id="mturk_form">
 	<p>
